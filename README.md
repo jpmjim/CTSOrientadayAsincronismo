@@ -16,3 +16,17 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   - La utilizamos para construir instancias de objetos, es como un molde para crear cosas.
   - Es una buena práctica inicializar las propiedades que coloquemos en nuestra clase, ya sea por fuera o dentro de nuestro constructor.
 
+## Métodos  
+  Describen el comportamiento de los objetos.
+
+  - Métodos son funciones que se pueden llamar desde un objeto.
+  - Métodos son una forma de encapsular el código que se repite.
+  - Métodos son una forma de agregar funcionalidad a nuestros objetos.
+  - Métodos son una forma de agregar funcionalidad a nuestros objetos.
+  ```typescript
+  class nameClass {
+		constructor (parameters) { statements }
+
+		methodName (parameters: dataTypes): dataType { statements }
+  }
+  ```
