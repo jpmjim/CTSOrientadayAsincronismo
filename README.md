@@ -68,3 +68,52 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     #methodName (parameters: dataTypes): dataType { statements }
   }
   ```
+
+## Constructor
+  Es el constructor en el que construimos la instancia y mandamos los parámetros por defecto por el cual queremos que se inicialice esa instancia a un objeto.
+  ```typescript
+  class nameClass {
+    constructor (parameters) { statements }
+    public propertyName: dataType = initialValue;
+    public methodName (parameters: dataTypes): dataType { statements }
+  }
+  ```
+  **Sintaxis anterior**
+  ```typescript
+  class ClassName {
+		property1: dataType;
+		propertyN: dataType;
+		constructor (property1: dataType, propertyN: dataType) {
+			this.proterty1 = property1;
+			this.protertyN = propertyN;
+		}
+  }
+  ```
+  **Sintaxis actual**
+  
+  De esta forma estaríamos definiendo y asignando las propiedades de una manera corta.
+
+  Cabe destacar que debemos de aclarar o ser explícitos con el alcance de las propiedades, caso contario no podremos usar esta característica de TypeScript además que no podremos usar esa propiedad a lo largo de la clase, ya que su scope solo se verá limitado al constructor.
+  ```typescript
+  class ClassName {
+		constructor (
+			scope property1: dataType, 
+			scope propertyN: dataType
+		) {
+			statements
+		}
+  }
+  ```
+  **Valores por defecto**
+  
+  Al tener valores por defecto, al momento de crear una instancia de esa clase ya no es obligatorio pasar ese parámetro que tiene un valor por defecto.
+  ```typescript
+  class ClassName {
+		constructor (
+			scope property1: dataType = value, 
+			scope propertyN: dataType = value
+		) {
+			statements
+		}
+  }
+  ```
