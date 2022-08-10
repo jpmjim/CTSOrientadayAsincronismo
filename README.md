@@ -237,3 +237,17 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     name: string;
   }
   ```
+
+## Clases abstractas
+  Las clases abstractas son tan ‘genericas’ que no tiene sentido que sean instanciadas. Usamos la keyword abstract.
+  ```typescript
+  abstract class NameClass {
+    constructor (
+      propertiesOfInterface
+    ) {
+      statements
+    }
+
+    abstract methodOfInterface (): dataType { statements }
+  }
+  ```
