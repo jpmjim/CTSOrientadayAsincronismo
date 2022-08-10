@@ -201,3 +201,39 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   ```
   **Solución**
   ![](https://static.platzi.com/media/user_upload/reto_static-78ba4c7b-a71f-4011-82cf-0b7e13befa5c.jpg)
+
+## Interfaces
+  Las interfaces en clases funcionan como contratos, nos permiten tipar tanto los atributos como los métodos.
+
+  Aquí no podemos utilizar encapsulamiento, por defecto todos los atributos y métodos son públicos.
+
+  ### Implements
+  Tiene la misma sintaxis cuando aplicamos herencias en las clases, pero implements no es una herencia, es un contrato que nos dice que nuestra clase tiene que cumplir con un estándar que es la interface.
+
+  Este contrato es tanto como para los parámetros como para los métodos.
+  ```typescript
+  interface NameInterface {
+	  statements
+  } 
+
+  class NameClass implements NameInterface {
+    constructor (
+      propertiesOfInterface
+    ) {
+      statements
+    }
+
+    methodOfInterface (): dataType { statements }
+  }
+  ```
+  [TypeORM](https://github.com/typeorm/typeorm) es una librería que nos permite crear una base de datos con una interfaz de datos.
+  ```typescript
+  import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+  @Entity()
+  export class NameClass {
+    @PrimaryGeneratedColumn()
+    id: number;
+    @Column()
+    name: string;
+  }
+  ```
