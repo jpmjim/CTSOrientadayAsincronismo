@@ -117,3 +117,23 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
 		}
   }
   ```
+
+## Getters
+  Con get podemos acceder a una propiedad con un alcance privado, podemos obtener los datos de esa propiedad pero no modificarlos o mutarlos.
+
+  Lo podemos acceder como si fuese una propiedad más de la instancia.
+
+  Por definición, todos los getters tienen que retornar algo.
+  ```typescript
+  class ClassName {
+		constructor () {
+			statements
+		}
+
+		get methodName () {
+      statements
+      return something;
+		}
+  }
+  ```
+  [Creación de una función de JavaScript para calcular si es un año bisiesto](https://dev.to/nas5w/creating-a-javascript-function-to-calculate-whether-it-s-a-leap-year-2cip)
