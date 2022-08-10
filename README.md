@@ -137,3 +137,18 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   }
   ```
   [Creación de una función de JavaScript para calcular si es un año bisiesto](https://dev.to/nas5w/creating-a-javascript-function-to-calculate-whether-it-s-a-leap-year-2cip)
+
+  ## Setters
+  Es parecido a un get, solo que este no retorna nada, es un método void, pero no hace falta colocarle lo que retorna, ya que va a dar error.
+
+  A set lo podemos usar para tener reglas de modificación para nuestros parámetros.
+  ```typescript
+  class ClassName {
+    constructor () {
+      statements
+    }
+    set methodName (parameters: dataTypes) {
+      statements
+    }
+  }
+  ```
