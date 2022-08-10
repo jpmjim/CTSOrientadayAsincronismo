@@ -164,3 +164,25 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     public methodName (parameters: dataTypes): dataType { statements }
   }
   ```
+
+## Acceso protegido
+  Básicamente, es la forma de heredar propiedades y métodos.
+
+  Es similar a como funciona una propiedad o método privado, pero nos permite realizar herencia.
+  ```typescript
+  class FatherClass {
+    constructor (
+      protected property1: dataType,
+      propertyN: dataType
+    ) {
+      statemenst
+    }
+  }
+
+  class ChildClass extends FatherClass {
+    constructor (properties and Inheritedproperties) {
+      super(Inheritedproperties)
+      statemenst
+    }
+  }
+  ```
