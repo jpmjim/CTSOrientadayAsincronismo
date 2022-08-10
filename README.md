@@ -251,3 +251,25 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     abstract methodOfInterface (): dataType { statements }
   }
   ```
+
+## Singleton: constructor privado
+  Singleton nos previene crear múltiples instancias de una clase.
+
+  Esto es muy usado en Arquitectura de Software, pues nos ayuda a ahorrar uso de memoria.
+  ```typescript
+  class NameClass {
+    private static instance: NameClass;
+    constructor (
+      propertiesOfInterface
+    ) {
+      statements
+    }
+
+    static getInstance (): NameClass {
+      if (!this.instance) {
+        this.instance = new NameClass();
+      }
+      return this.instance;
+    }
+  }
+  ```
