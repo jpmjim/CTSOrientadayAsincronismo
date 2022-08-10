@@ -186,3 +186,18 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     }
   }
   ```
+
+## Static
+  Es una forma de heredar propiedades y métodos, pero no se puede heredar de una clase estática.
+
+  Es similar a como funciona una propiedad o método privado, pero nos permite realizar herencia.
+
+  **[Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)**
+
+  ```typescript
+  class Math {
+    static methodName (parameters: dataTypes): dataType { statements }
+  }
+  ```
+  **Solución**
+  ![](https://static.platzi.com/media/user_upload/reto_static-78ba4c7b-a71f-4011-82cf-0b7e13befa5c.jpg)
