@@ -152,3 +152,15 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     }
   }
   ```
+
+## Herencia
+  Como su palabra lo dice, las propiedades y métodos de una clase son heredadas por otra para evitar la redundancia de código en nuestro proyector.
+  ```typescript
+  class ClassName {
+    constructor () {
+      statements
+    }
+    public propertyName: dataType = initialValue;
+    public methodName (parameters: dataTypes): dataType { statements }
+  }
+  ```
