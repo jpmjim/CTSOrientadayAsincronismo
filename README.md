@@ -342,3 +342,34 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     return rta;
   }
   ```
+
+## Tipando respuestas HTTP
+  Es importante poder tipar tanto nuestras funciones, ya sea inferidamente o explícitamente, como las variables que manejamos internamente dentro de ella.
+
+  ### [Quicktype](https://quicktype.io/)
+  Esta página transforma nuestro archivo JSON en el tipado que le corresponde al mismo para poder tipar nuestras repuestas HTTP.
+  ![](https://static.platzi.com/media/user_upload/Screenshot%20from%202022-05-24%2017-10-29-ebc0d85c-f1b6-4ac0-ba8b-97ca3e5c12d2.jpg)
+  Podemos usar [Paste JSON as Code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype) dentro de VIsual Studio Code para poder transformar nuestro archivo JSON en el tipado que le corresponde al mismo.
+
+  ### Axios
+  Axios nos permite tipar las peticiones que hacemos de la siguiente manera.
+  ```typescript
+  import axios from 'axios';
+  axios.get<Product>('https://api.escuelajs.co/api/v1/products')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  ```
+  ### Aserción AS
+  También podemos realizar el tipado por medio de aserción de tipos con as, pero lo ideal es hacerlo con el primer método.
+  ```typescript
+  async function getProductsAsync () {
+    const rta = await axios.get(URL);
+    const data = rta.data as Product[];
+    return data;
+  }
+  ```
+
