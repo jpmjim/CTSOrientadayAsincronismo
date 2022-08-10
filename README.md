@@ -273,3 +273,72 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     }
   }
   ```
+
+## Promesas
+  Son una forma de manejar la asincronía en nuestros programas.
+  ### [Axios](https://axios-http.com/)
+  Instalación:
+  ```bash
+  npm install axios
+  ```
+  Es una forma interesante de hacer request y conectarnos a servicios web, nos va a servir para hacer peticiones desde el frontend como en el backend.
+  ```typescript
+  import axios from 'axios';
+  axios.get('https://api.github.com/users/octocat')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  ```
+  ### Asincronismo y TypeScript
+  Podemos correr promesas y código asíncrono con TypeScript de la misma forma que lo haríamos con JavaScript.
+  ### Tipado y promesas
+  En el caso de no colocar el tipo de dato de retorno de nuestra función asíncrona, TypeScript supondrá que es una promesa, pero no sabe el tipo de dato que retorna esa promesa.
+
+  Podemos tipar a una promesa con genéricos:
+  ```typescript
+  function getData<T>(): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+      resolve(data);
+    });
+  }
+  ```
+  ### Promesas con async/await
+  Podemos usar async/await para hacer peticiones a servicios web.
+  ```typescript
+  async function getData(): Promise<any> {
+    const response = await axios.get('https://api.github.com/users/octocat');
+    return response.data;
+  }
+  ```
+  ### Promesas con async/await y tipado
+  Podemos usar async/await para hacer peticiones a servicios web y tipar a la promesa con genéricos.
+  ```typescript
+  async function getData<T>(): Promise<T> {
+    const response = await axios.get('https://api.github.com/users/octocat');
+    return response.data;
+  }
+  ```
+  ### Promesas con async/await y tipado y error
+  Podemos usar async/await para hacer peticiones a servicios web y tipar a la promesa con genéricos y manejar errores.
+  ```typescript
+  async function getData<T>(): Promise<T> {
+    try {
+      const response = await axios.get('https://api.github.com/users/octocat');
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  ```
+  ### Fetch con NODE v18
+  Podemos utilizar nodejs para poder realizar peticiones fetch pero solo lo podemos hacer con la versión 18, es una feature no estable así que puede tener sus errores.
+  ```typescript
+  async function getProductsFetch () {
+    const promise = await fetch('https://api.escuelajs.co/api/v1/products');
+    const rta = await promise.json();
+    return rta;
+  }
+  ```
