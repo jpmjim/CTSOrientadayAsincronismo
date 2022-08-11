@@ -386,4 +386,11 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   const productMemoryService = new ProductMemoryService();
   const products = productMemoryService.getProducts();
   ```
-  
+
+## ProductHttpService
+  HttpService es una clase que nos permite hacer peticiones HTTP.
+  ```typescript
+  import { HttpService } from './http-service';
+  const httpService = new HttpService();
+  const products = await httpService.getProducts();
+  ```
