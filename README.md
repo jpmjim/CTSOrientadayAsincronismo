@@ -394,3 +394,12 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   const httpService = new HttpService();
   const products = await httpService.getProducts();
   ```
+
+## Consumiendo ProductHttpService
+  Podemos usar la herramienta de [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+  Consumimos el servicio de productos que creamos en el archivo product-http-service.ts.
+  ```typescript
+  import { ProductHttpService } from './product-http-service';
+  const productHttpService = new ProductHttpService();
+  const products = await productHttpService.getProducts();
+  ```
