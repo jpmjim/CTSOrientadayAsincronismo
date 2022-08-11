@@ -373,3 +373,8 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   }
   ```
 
+## Proyecto: migración de funciones a clases
+  Instlamos faker para poder generar datos aleatorios.
+  ```typescript
+  npm install @faker-js/faker
+  ```
