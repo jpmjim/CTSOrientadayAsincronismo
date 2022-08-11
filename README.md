@@ -403,3 +403,22 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   const productHttpService = new ProductHttpService();
   const products = await productHttpService.getProducts();
   ```
+
+## Generics
+  Genericos son una forma de tipar nuestras funciones y variables.
+  [Generics en TypeScrip](https://desarrolloweb.com/articulos/generics-typescript.html)
+  ```typescript
+  function getData<T>(): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+      resolve(data);
+    });
+  }
+  ```
+  Por convención, se utiliza el nombre " **T** " para dar a conocer que es un generics, es muy común ver este tipo de nombre en otros repositorios, documentación y también es usado en otros lenguajes como java y C#.
+
+  **Otros nombres utilizados en los generics son:**
+  - E - Elemento (elementos en una colección)
+  - K - Llave
+  - N - Número
+  - V - Valor
+
