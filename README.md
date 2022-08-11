@@ -378,3 +378,12 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   ```typescript
   npm install @faker-js/faker
   ```
+
+## Consumiendo ProductMemoryService
+  Consumimos el servicio de productos que creamos en el archivo product-memory-service.ts.
+  ```typescript
+  import { ProductMemoryService } from './product-memory-service';
+  const productMemoryService = new ProductMemoryService();
+  const products = productMemoryService.getProducts();
+  ```
+  
