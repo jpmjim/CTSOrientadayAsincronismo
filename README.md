@@ -422,3 +422,11 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   - N - Número
   - V - Valor
 
+## Generics en clases
+  Generics en clases son una forma de tipar nuestras clases.
+  ```typescript
+  class Product<T> {
+    constructor(public name: T) {}
+  }
+  ```
+
