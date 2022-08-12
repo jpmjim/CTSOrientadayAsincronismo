@@ -459,3 +459,5 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     title = 'app';
   }
   ```
+
+[Build a Shopping Cart using React and TypeScript](https://irvingvjuarez.medium.com/build-a-shopping-cart-using-react-and-typescript-58d57170b4eb)
