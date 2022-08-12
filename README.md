@@ -430,3 +430,15 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
   }
   ```
 
+## Generics en métodos
+  Generics typescript son una forma de tipar nuestros métodos.
+  ```typescript
+  class Product<T> {
+    constructor(public name: T) {}
+    getName(): T {
+      return this.name;
+    }
+  }
+  ```
+  
+
