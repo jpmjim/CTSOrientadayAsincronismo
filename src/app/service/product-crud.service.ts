@@ -1,3 +1,5 @@
+import { validate } from "class-validator";
+
 import { UpdateProductDto } from "../dtos/product.dto";
 import { Product } from "../models/product.model";
 import { BaseHttpService } from "./base-http.service";
@@ -10,6 +12,7 @@ export class ProductCRUDService {
   async update(id: Product['id'], dto: UpdateProductDto) {
     // permisos
     // logica
+    // validate(dto)
     return this.http.update(id, dto);
   }
 }

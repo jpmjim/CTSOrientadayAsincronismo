@@ -440,5 +440,22 @@ Curso de TypeScript: Programación Orientada a Objetos y Asincronismo
     }
   }
   ```
-  
 
+## Decoradores
+  Instalación de [class-validator](https://github.com/typestack/class-validator):
+  ```typescript
+  npm install class-validator
+  ```
+
+  Decoradores en TypeScript son una forma de tipar nuestras clases.
+  ```typescript
+  @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+  })
+
+  export class AppComponent {
+    title = 'app';
+  }
+  ```
